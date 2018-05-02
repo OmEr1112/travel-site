@@ -1,0 +1,41 @@
+.testimonial {
+    background-color: rgba(255, 255, 255, .8);
+    padding: 0 18px 1px 18px;
+    margin-bottom: 98px;
+
+    @include atLarge {
+        margin-bottom: 0;
+        padding: 0 1.8125rem 1px 1.8125rem; /* b-p 1px to see the margin of containing paragraph */
+      }
+
+    &--last {
+        margin-bottom: 0;
+    }
+  
+    &--photo {
+      border-radius: 80px;
+      overflow: hidden; /* so we can see the rounded border */
+      width: 160px;
+      height: 160px;  /* same width and height as image*/
+      margin: 0 auto -80px auto; /* negative bottom margin is used to offset the effect of relative positioning*/
+      position: relative;
+      top: -80px; /* pulled the image up to violate the container edge*/
+      border: 6px solid rgba(255, 255, 255, .8);
+    }
+  
+    &--title {
+      color: $mainBlue;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 0;
+    }
+  
+    &--subtitle {
+      color: $mainOrange;
+      text-align: center;
+      font-weight: 400;
+      font-size: 0.9375rem;
+      margin: .25rem 0 1rem 0;
+    }
+  }
